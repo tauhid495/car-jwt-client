@@ -17,7 +17,7 @@ const Register = () => {
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
     const location = useLocation();
 
-    let from = location.state.from.pathname || "/";
+    let from = location.state?.from?.pathname || "/";
 
     const navigate = useNavigate();
 

@@ -16,7 +16,7 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
-    let from = location.state.from.pathname || "/";
+    let from = location.state?.from?.pathname || "/";
     let errorElement;
     const [
         signInWithEmailAndPassword,
@@ -32,7 +32,7 @@ const Login = () => {
     }
 
     if (user) {
-        // navigate(from, { replace: true });
+        navigate(from, { replace: true });
     }
 
     if (error) {
